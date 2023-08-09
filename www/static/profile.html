@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='viewport' content='width=device-width, initial-scale=1 maximum-scale=1'>
+ <!--
+ add every stylesheet and script
+ <link rel='stylesheet' href='asset/styles.css'>
+ <script src='asset/script.js'></script>
+ -->
+  <link rel="stylesheet" type="text/css" href="asset/bootstrap.css">
+  <script src="asset/jquery-3.7.0.min.js"></script>
+  <script src="asset/bootstrap.bundle.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <title>Profile</title>
+  <link rel="stylesheet" type="text/css" href="asset/profile.css">
+  
+  </head>
+  
+  <body>
+    
+  <div class="body">
+    
+   <div class="header">
+   <div class='container-fluid text-center px-0 bird-box'>
+     <p class="lead head mb-2">B <img class='bird' src='asset/bird.png'> ird's Nest</p>
+     <p class='bar'>Logged in as: <strong>Habeeb</strong></p>
+   </div>
+   
+   <div class='container-lg text-center px-4 pb-2' id="buttons">
+    <div class="utility row justify-content-center">
+     <a class="btn button col-auto m-1 mx-md-3 px-3" href='index.php?home'>Home</a>
+     <a class='btn button col-auto m-1 mx-md-3 px-3' href='status.php'>Status</a>
+     <a class='btn button col-auto m-1 mx-md-3' href='members.php'>Members</a>
+     <a class='btn button col-auto m-1 mx-md-3' href='friends.php'>Friends</a>
+     <a class='btn button col-auto m-1 mx-md-3 px-3' href='chat.php'>Chats</a>
+     <a class='btn button col-auto m-1 mx-md-3' href='profile.php'>Profile</a>
+     <a class='btn button out col-auto m-1 mx-md-3' href='logout.php'>Log out</a>
+    </div>
+   </div>
+   </div>
+   
+   <br><br>
+   
+   <div class="container content">
+     
+   <div class="account text-center"> 
+     <h6 class="account-title">Sneezy</h6>
+     <div class="pic-cont">
+      <img class="account-pic" src="asset/userIcon.png">
+     </div>
+     <p class="online">
+       <span class="online-status"></span>
+       online
+    </p>
+   </div>
+   
+   
+  <form method='post' action='profile.php'>
+     
+   <div class="container mt-5 text-end">
+     <button type="submit" class="save-edit edit hidden-edit">
+       <i class="bi bi-save"></i>
+       Save
+     </button>
+     <span class="cancel-edit edit hidden-edit">
+       <i class="bi bi-x-lg"></i>
+       Cancel
+     </span>
+     <span class="edit-edit edit">
+       <i class="bi bi-pencil"></i>
+       Edit
+     </span>
+   </div>
+   
+   <div class="nationality">
+     <div class="visible-input">
+       <h6 class="nat-title">Nationality</h6>
+       <p class="nat-value ps-2 mb-3">
+         Nigeria &#x1F1F3;&#x1F1EC;
+       </p>
+     </div>
+     
+     <div class="col col-md-6 mb-4 hidden-input">
+     <div class="form-floating">
+      <select class="form-select input" name="country" id="countryInput">
+        <option selected value="Nigeria">Nigeria &#x1F1F3;&#x1F1EC;</option>
+        <option value="Ghana">Ghana &#x1F1EC;&#x1F1ED;</option>
+        <option value="Togo">Togo &#x1F1F9;&#x1F1EC;</option>
+        <option value="South Africa">South Africa  &#x1F1FF;&#x1F1E6;</option>
+      </select>
+     <label for="countryInput">country</label>
+     </div>
+     </div>
+   </div>
+     
+     <br>
+     
+   <div class="user-about">
+     <div class="visible-input">
+       <h6 class="about-title">About Sneezy</h6>
+       <p class="about-value ps-2 mb-3">
+       </p>
+     </div>
+     
+     <div class="col col-md-10 mb-4 hidden-input">
+     <div class="form-floating">
+     <textarea class="form-control input" placeholder="write something about yourself" name="about" id="aboutInput" style="height: 120px; max-height: 250px;"></textarea>
+      <label for="aboutInput">
+        Write something about yourself
+      </label>
+     </div>
+     </div>
+   </div>
+   
+  </form>
+   
+   <div class="container mt-5 text-center">
+     <a href="#" class="change-pass">change password</a>
+   </div>
+   
+   </div>
+   
+   <!-- dialog for changing photo -->
+   <div class="dialog row m-0 justify-content-center align-items-center">
+     <i class="bi bi-x-lg close-dialog"></i>
+     <div class="col- col-sm-9 col-md-7 col-lg-5 change-pic-cont">
+       <div class="row update-pic justify-content-center">
+           <input
+           type="file"
+           id="fileElem"
+           accept="image/*"
+           class="visually-hidden" />
+           
+          <label id="remove-image" class="col-auto browse">
+            <i class="bi bi-x-lg"></i>
+            <span> remove </span>
+          </label>
+          <label id="change-image" class="col-auto browse" for="fileElem">
+            <i class="bi bi-plus-lg"></i>
+            <span> change </span>
+          </label>
+       </div>
+       
+       <div class="row image-load align-items-center text-center">
+         <div class="col">
+          <div class="spinner-border" style="width:4rem; height:4rem; color:lightgrey; border-width:2px;" role="status"></div>
+         </div>
+       </div>
+       
+       <img class="current-pic">
+     </div>
+   </div>
+
+ </div>
+   
+  <script src="asset/profile.js"></script>
+   
+</body>
+</html>
+    

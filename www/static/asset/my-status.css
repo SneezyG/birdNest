@@ -1,0 +1,335 @@
+  
+  @keyframes post-click {
+    from {background-color: white;}
+    to {background-color: rgba(211, 211, 211, 0.5);}
+  }
+  
+  @keyframes remove-filter {
+    from {filter: blur(2px)}
+    to {filter: none}
+  }
+  
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      user-select: none;
+    }
+    
+    #liveAlertPlaceholder {
+      position: absolute;
+      z-index: 2;
+    }
+    
+    .body {
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    
+    .body::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    /* Track */
+   .body::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey; 
+      border-radius: 3px;
+    }
+     
+    /* Handle */
+   .body::-webkit-scrollbar-thumb {
+      background: rgba(51, 102, 153, 0.4); 
+      border-radius: 3px;
+    }
+    
+    /* Handle on hover */
+   .body::-webkit-scrollbar-thumb:hover {
+      background: rgba(51, 102, 153, 0.7);
+    }
+    
+    .bird {
+      width: 30px;
+      transform: scale(1.5);
+    }
+    
+    .head {
+      color: #003366;
+    }
+    
+    .bar {
+      background-color: #336699;
+      color: white;
+      padding: 2px;
+      font-size: 13px;
+    }
+    
+    .button {
+      white-space: nowrap;
+      background-color: #66CCCC !important;
+      font-size: 13px;
+    }
+    
+   .out {
+      background-color: #FF9900 !important;
+    }
+    
+    .arrow {
+      font-size: 70px;
+      color: #FF9900;
+    }
+    
+    .please {
+      color: #003366;
+    }
+    
+    .header {
+      position: fixed;
+      background-color: rgba(255, 255, 255, 0.2);
+      width: 100%;
+      z-index: 1;
+    }
+    
+    .content {
+      margin-top: 130px;
+      position: relative;
+      padding-bottom: 150px;
+    }
+    
+    .bird-box {
+      background-color: white;
+    }
+    
+    .post {
+      padding: 10px 0;
+      border-radius: 20px;
+      color: white;
+      font-size: 20px;
+      margin-bottom: 20px;
+      animation: post-click 0.3s linear;
+      animation-fill-mode: forwards;
+      animation-play-state: paused;
+    }
+    
+    .status-pic {
+      width: 60px;
+      height: 60px;
+      border: 1px solid lightgrey;
+      border-radius: 30px;
+      background-color: grey;
+    }
+    
+    .mutual-status {
+      color: black;
+    }
+    
+    .mutual-name > p {
+      font-size: 15px;
+    }
+    
+    .mutual-name > small {
+      font-size: 13px;
+      opacity: 0.7
+    }
+    
+    .delete {
+      position: relative;
+    }
+    
+    .del-btn {
+      font-size: 13px;
+      position: absolute;
+      right: 30px;
+    }
+    
+    .add-status {
+      padding: 10px 18px;
+      background-color: rgba(255, 153, 0, 0.8) !important;
+      display: inline-block;
+      border-radius: 40px;
+      position: fixed;
+      bottom: 50px;
+      right: 20px;
+    }
+    
+    .new-status {
+      color: white;
+      font-size: 40px;
+    }
+    
+   .dialog {
+     display: none;
+     overflow: hidden;
+     position: fixed;
+     top: 40px;
+     left: 0;
+     z-index: 2;
+     background-color: rgba(51, 102, 153, 0.4);
+   }
+   
+   .shower-cont {
+     height: 100%;
+   }
+   
+   .status-shower {
+     background-color: black;
+     height: 100%;
+   }
+   
+   .shower-tag {
+     height: 3px;
+     background-color: grey;
+     margin: 0 4px;
+     border-radius: 20px;
+   }
+
+   .shower-tag-cont {
+     margin: 10px 0;
+   }
+ 
+   .the-media-cont {
+     height: 90%;
+   }
+   
+   .the-status {
+     height: 100%;
+     position: relative;
+     background-color: rgba(211, 211, 211, 0.1);
+     animation: remove-filter 0.5s linear;
+     animation-fill-mode: forwards;
+     animation-play-state: paused;
+   }
+   
+   .the-media {
+     width: 100%;
+     height: 100%;
+     display: none;
+   }
+   
+   .status-about {
+     position: absolute;
+     display: none;
+     bottom: 0;
+     padding: 20px 0;
+     font-size: 14px;
+     background-color: rgba(0, 0, 0, 0.4);
+   }
+   
+   .reply {
+     font-size: 13px;
+     font-weight: bold;
+     padding: 0 20px 10px 20px;
+     display: inline-block;
+   }
+   
+   .reply-icon {
+     position: relative;
+     top: 7px;
+     font-size: 20px;
+   }
+   
+   .status-loading-cont {
+     position: absolute;
+     display: none;
+     margin-left: -30px;
+     top: 40%;
+     left: 50%;
+     width: 60px; 
+     height: 60px;
+     filter: none;
+   }
+   
+   .status-loading {
+     color: rgba(211, 211, 211, 0.15);
+     width: 100%;
+     height: 100%;
+   }
+  
+   .footer {
+     background-color: #336699;
+     position: fixed;
+     bottom: 0;
+     display: none;
+     border-radius: 10px;
+   }
+   
+   .textarea {
+      text-align: start;
+      max-height: 100px;
+      overflow-y: scroll;
+      color: #555555 !important;
+      background-color: lightgrey;
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: 500;
+      letter-spacing: -0.5px;
+      font-size: 16px;
+    }
+    
+    .textarea:focus {
+      background-color: lightgrey;
+    }
+    
+    .textarea[contenteditable]:empty::before {
+     content: "send a message";
+     color: gray;
+    }
+   
+   .sendBtn {
+      background-color: grey;
+      pointer-events: none;
+      color: white;
+      max-height: 40px;
+    }
+    
+    .textarea::-webkit-scrollbar {
+      width: 0;
+    }
+    
+    .clock {
+      font-size: 15px;
+      opacity: 1;
+    }
+    
+    .alert {
+      font-size: 14px;
+    }
+    
+    .alert > span {
+      color: red;
+    }
+    
+    .modal-title {
+      font-size: 16px !important;
+    }
+    
+    .modal-btn {
+      font-size: 13px;
+    }
+    
+    .alert-mutual-name {
+      font-size: 15px;
+      text-transform: capitalize;
+    }
+    
+    
+
+    @media (min-width: 768px) { 
+      .footer {
+        position: absolute;
+        bottom: 10px;
+      }   
+      
+      .body::-webkit-scrollbar {
+        width: 11px;
+      }
+    } 
+
+    @media (max-width: 576px) {
+      .content {
+        margin-top: 150px;
+      }
+    }
+    
+ 
+      
+    
+    

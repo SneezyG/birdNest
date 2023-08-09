@@ -1,0 +1,184 @@
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      user-select: none;
+    }
+    
+    #liveAlertPlaceholder {
+      position: absolute;
+      z-index: 2;
+    }
+    
+    .body {
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    
+   .body::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    /* Track */
+   .body::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey; 
+      border-radius: 3px;
+    }
+     
+    /* Handle */
+   .body::-webkit-scrollbar-thumb {
+      background: rgba(51, 102, 153, 0.4); 
+      border-radius: 3px;
+    }
+    
+    /* Handle on hover */
+   .body::-webkit-scrollbar-thumb:hover {
+      background: rgba(51, 102, 153, 0.7);
+    }
+    
+    
+    .bird {
+      width: 30px;
+      transform: scale(1.5);
+    }
+    
+    .head {
+      color: #003366;
+    }
+    
+    .bar {
+      background-color: #336699;
+      color: white;
+      padding: 2px;
+      font-size: 13px;
+    }
+    
+    .btn {
+      white-space: nowrap;
+      background-color: #66CCCC !important;
+      font-size: 13px;
+    }
+    
+   .header {
+      position: fixed;
+      background-color: rgba(255, 255, 255, 0.2);
+      width: 100%;
+      z-index: 1;
+    }
+    
+    .content {
+      width: 100%;
+      margin-top: 120px;
+    }
+    
+    .bird-box {
+      background-color: white;
+    }
+    
+    .browse {
+      padding: 7px 10px;
+      border-radius: 20px;
+      color: black;
+      font-size: 14px;
+      margin: 0 15px;
+      margin-bottom: 3px;
+      transition: background-color 0.25s ease;
+    }
+    
+    .browse-active {
+      background-color: rgba(51, 102, 153, 0.2);
+      pointer-events: auto;
+      border: none;
+    }
+    
+    .browse-inactive {
+      pointer-events: none;
+      background-color: white !important;
+      border: 1px solid rgba(51, 102, 153, 0.4);
+    }
+    
+    .browse.clicked {
+      background-color: rgba(51, 102, 153, 0.4);
+    }
+    
+    .out {
+      background-color: #FF9900 !important;
+    }
+    
+    .update {
+      color: #003366;
+    }
+    
+    .box {
+      height: 600px;
+    }
+    
+    .image-box {
+      height: 100%;
+      background-color: rgba(51, 102, 153, 0.1);
+      border-radius: 20px;
+    }
+    
+    .image {
+      height: 100%;
+      border-radius: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+   .footer {
+     background-color: rgba(51, 102, 153, 0.4);
+     position: fixed;
+     bottom: 5px;
+     display: none;
+     border-radius: 15px;
+   }
+   
+   .textarea {
+     max-height: 100px;
+     overflow-y: auto;
+     font-size: 16px;
+   }
+   
+   .textarea[contenteditable]:empty::before {
+     content: "Add a caption";
+     color: gray;
+    }
+   
+   .the-image {
+     width: 100%;
+     border: 4px solid rgba(0, 0, 0, 0);
+     box-sizing: border-box;
+   }
+   
+   .dialog {
+     background-color: rgba(211, 211, 211, 0.5);
+     position: fixed;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     z-index: 2;
+     display: none;
+   }
+   
+   .image-load {
+     height: 100%;
+   }
+  
+   @media (min-width: 768px) { 
+      .image {
+        border-radius: 0;
+      }
+      
+     .body::-webkit-scrollbar {
+        width: 11px;
+      }
+    } 
+
+    @media (max-width: 576px) {
+      .content {
+        margin-top: 160px;
+      }
+    }
+    
+    

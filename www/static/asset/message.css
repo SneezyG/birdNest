@@ -1,0 +1,254 @@
+
+@keyframes newMsg {
+    from {transform: scale(1);}
+    to {transform: scale(1.5);}
+}
+
+
+html, body {
+      height: 100%;
+    }
+    
+    .content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .bird {
+      width: 30px;
+      transform: scale(1.5);
+    }
+    
+    .dp {
+      width: 45px;
+      background-color: lightgrey;
+      border-radius: 18px;
+    }
+
+    .bar {
+      background-color: rgba(51, 102, 153);
+    }
+    
+    .offsetT {
+      position: relative;
+      top: 11px;
+    }
+    
+    .chat {
+      flex: 1;
+      overflow-y: auto;
+    }
+    
+    .chatBox::-webkit-scrollbar {
+      width: 5px;
+    }
+    
+    /* Track */
+   .chatBox::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey; 
+      border-radius: 3px;
+    }
+     
+    /* Handle */
+   .chatBox::-webkit-scrollbar-thumb {
+      background: rgba(51, 102, 153, 0.4); 
+      border-radius: 3px;
+    }
+    
+    /* Handle on hover */
+   .chatBox::-webkit-scrollbar-thumb:hover {
+      background: rgba(51, 102, 153, 0.7);
+    }
+    
+    .chatBox {
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column-reverse;
+      max-height: 100%;
+    }
+    
+    .footer {
+      width: 100%;
+      background-color: rgba(51, 102, 153);
+    }
+    
+    .light {
+      display: inline-block;
+      width: 11px;
+      height: 11px;
+      border-radius: 7px;
+      background-color: #CD5C5C;
+      border: ;
+    }
+    
+    .name {
+      text-transform: capitalize;
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+    }
+    
+    b {
+      color: #003366;
+    }
+    
+    .sendBtn {
+      background-color: grey;
+      pointer-events: none;
+      color: white;
+      max-height: 40px;
+    }
+    
+    .bell {
+      padding: 7px;
+    }
+    
+    .btn {
+      font-size: 14px;
+    }
+    
+    .head {
+      color: #003366;
+    }
+    
+    .msg {
+      padding: 5px;
+    }
+    
+    .me, .you {
+      margin: 0;
+      font-size: 15px;
+      padding: 7px 0;
+      max-width: 80%;
+      position: relative;
+      color: #555555;
+    }
+    
+    .me {
+      background-color: lightblue;
+      border-radius: 20px 20px 0 20px;
+      float: right;
+    }
+    
+    .you {
+      background-color: lightgrey;
+      border-radius: 0 20px 20px 20px;
+      float: left;
+    }
+
+    .msgBody {
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: 500;
+      letter-spacing: -0.5px;
+      font-size: 15px;
+      color: #474646;
+    }
+  
+    .status {
+      margin: 0 4px 0 5px;
+      padding-left: 3px;
+      margin-bottom: 7px;
+      background-color: rgba(51, 102, 153, 0.4);
+      border-left: 4px solid #FFFF66;
+      border-radius: 7px;
+    }
+        
+    .statusBody {
+      height: 60px;
+      overflow: hidden;
+    }
+    
+    .status-about {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 14px;
+    }
+    
+    .status h6 {
+      color: #FFFF66;
+      font-size: 15px;
+    }
+    
+    .reply {
+      padding: 0 7px 0 7px;
+    }
+    
+    .statusBody, .msgBody {
+      line-height: 1.2;
+    }
+    
+    .time {
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      top: 5px;
+      height: 100%;
+    }
+    
+    .textarea {
+      text-align: start;
+      max-height: 100px;
+      overflow-y: auto;
+      color: #3b3a3a !important;
+      background-color: lightgrey;
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: 500;
+      letter-spacing: -0.5px;
+      font-size: 16px;
+    }
+    
+    .textarea:focus {
+      background-color: lightgrey;
+    }
+    
+    .textarea[contenteditable]:empty::before {
+     content: "send a message";
+     color: gray;
+    }
+    
+    .msgHeader {
+      background-color: #66CCCC;
+      display: inline-block;
+      padding: 3px 13px;
+      border-radius: 12px;
+      font-size: 13px;
+      color: #555555;
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: 500;
+      letter-spacing: -0.5px;
+    }
+    
+    #liveAlertPlaceholder {
+      position: absolute;
+      z-index: 1;
+    }
+    
+    .toast-body {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    
+    .msg-img {
+      width: 60px;
+      background-color: grey;
+      border-radius: 0 7px 7px 0;
+    }
+    
+    .alert {
+      font-size: 14px;
+    }
+    
+    .modal-title {
+      font-size: 16px !important;
+    }
+    
+   @media (min-width: 768px) {
+      .body::-webkit-scrollbar {
+        width: 10px;
+      }
+   }
+    
+    

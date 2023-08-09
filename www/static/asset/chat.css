@@ -1,0 +1,210 @@
+  @keyframes chat-click {
+    from {background-color: white;}
+    to {background-color: rgba(211, 211, 211, 0.5);}
+  }
+  
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      user-select: none;
+    }
+    
+    #liveAlertPlaceholder {
+      position: absolute;
+      z-index: 2;
+    }
+    
+    .body {
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    
+    .body::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    /* Track */
+   .body::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey; 
+      border-radius: 3px;
+    }
+     
+    /* Handle */
+   .body::-webkit-scrollbar-thumb {
+      background: rgba(51, 102, 153, 0.4); 
+      border-radius: 3px;
+    }
+    
+    /* Handle on hover */
+   .body::-webkit-scrollbar-thumb:hover {
+      background: rgba(51, 102, 153, 0.7);
+    }
+    
+    .bird {
+      width: 30px;
+      transform: scale(1.5);
+    }
+    
+    .head {
+      color: #003366;
+    }
+    
+    .bar {
+      background-color: #336699;
+      color: white;
+      padding: 2px;
+      font-size: 13px;
+    }
+    
+    .button {
+      white-space: nowrap;
+      background-color: #66CCCC !important;
+      font-size: 13px;
+    }
+    
+   .out {
+      background-color: #FF9900 !important;
+    }
+    
+    .please {
+      color: #003366;
+    }
+    
+    .header {
+      position: fixed;
+      background-color: rgba(255, 255, 255, 0.2);
+      width: 100%;
+      z-index: 1;
+    }
+    
+    .content {
+      margin-top: 110px;
+    }
+    
+    .bird-box {
+      background-color: white;
+    }
+    
+    .chat {
+      margin: auto;
+      height: 30px;
+    }
+    
+    .chat-title {
+      color: #003366;
+    }
+    
+   .user-chat {
+      padding: 10px 0 10px 0;
+      border-radius: 20px;
+      color: white;
+      font-size: 20px;
+      margin-bottom: 20px;
+      animation: chat-click 0.3s linear;
+      animation-fill-mode: forwards;
+      animation-play-state: paused;
+    }
+    
+    .mutual-pic {
+      width: 60px;
+      height: 60px;
+      border: 1px solid lightgrey;
+      border-radius: 30px;
+      background-color: grey;
+    }
+    
+    .mutual-chat {
+      color: black;
+    }
+    
+    .username {
+      font-size: 15px;
+    }
+    
+    .online-status {
+      display: inline-block;
+      height: 10px;
+      width: 10px;
+      background-color: #339966;
+      border-radius: 50%;
+    }
+    
+    .last-msg {
+      font-size: 13px;
+      padding-top: 5px;
+      opacity: 0.7;
+      display: inline-block;
+      width: 240px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    .clock {
+      font-size: 15px;
+      opacity: 1;
+    }
+    
+    .last-time {
+      font-size: 13px;
+      opacity: 0.7;
+      margin-left: 20px;
+    }
+    
+    .load {
+      margin-bottom: 7px;
+    }
+    
+    .alert {
+      font-size: 14px;
+    }
+    
+    .alert > span {
+      color: red;
+    }
+    
+    .del-btn {
+      font-size: 13px;
+    }
+    
+    .modal-title {
+      font-size: 16px !important;
+    }
+    
+    .modal-btn {
+      font-size: 13px;
+    }
+    
+    .alert-mutual-name {
+      font-size: 15px;
+      text-transform: capitalize;
+    }
+    
+
+    @media (max-width: 576px) {
+      .content {
+        margin-top: 150px;
+      }
+    }
+    
+   
+    @media (min-width: 960px) { 
+      .last-msg {
+        width: 300px;
+      }
+    } 
+
+    @media (min-width: 1000px) { 
+      .last-msg {
+        width: 400px;
+      }
+    } 
+    
+   @media (min-width: 768px) {
+      .body::-webkit-scrollbar {
+        width: 11px;
+      }
+   }
+
+
+    

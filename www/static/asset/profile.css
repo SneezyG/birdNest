@@ -1,0 +1,244 @@
+    @keyframes chat-click {
+      from {background-color: white;}
+      to {background-color: rgba(211, 211, 211, 0.5);}
+    }
+    
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      user-select: none;
+    }
+    
+    .body {
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    
+    .body::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    /* Track */
+   .body::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey; 
+      border-radius: 3px;
+    }
+     
+    /* Handle */
+   .body::-webkit-scrollbar-thumb {
+      background: rgba(51, 102, 153, 0.4); 
+      border-radius: 3px;
+    }
+    
+    /* Handle on hover */
+   .body::-webkit-scrollbar-thumb:hover {
+      background: rgba(51, 102, 153, 0.7);
+    }
+    
+    
+    .bird {
+      width: 30px;
+      transform: scale(1.5);
+    }
+    
+    .head {
+      color: #003366;
+    }
+    
+    .bar {
+      background-color: #336699;
+      color: white;
+      padding: 2px;
+      font-size: 13px;
+    }
+    
+    .button {
+      white-space: nowrap;
+      background-color: #66CCCC !important;
+      font-size: 13px;
+    }
+    
+   .out {
+      background-color: #FF9900 !important;
+    }
+    
+    .please {
+      color: #003366;
+    }
+    
+    .header {
+      position: fixed;
+      background-color: rgba(255, 255, 255, 0.2);
+      width: 100%;
+      z-index: 1;
+    }
+    
+    .content {
+      margin-top: 110px;
+      margin-bottom: 120px;
+    }
+    
+    .bird-box {
+      background-color: white;
+    }
+    
+    .account {
+      margin-bottom: 20px;
+    }
+    
+    .account-title, .acc-friend {
+      text-decoration: capitalize;
+      color: #003366;
+    }
+    
+    .pic-cont {
+      height: 100px;
+    }
+    
+    .account-pic {
+      height: 100px;
+      width: 100px;
+      position: relative;
+      background-color: grey;
+      border: 1px solid lightgrey;
+      border-radius: 50%;
+    }
+    
+    .online {
+      margin-top: 7px;
+      color: grey;
+    }
+    
+    .online-status {
+      display: inline-block;
+      height: 12px;
+      width: 12px;
+      background-color: #339966;
+      border-radius: 50%;
+    }
+    
+    .nationality, .user-about {
+      padding: 7px;
+      border-left: 3px solid #66CCCC;
+    }
+    
+    .about-value {
+      font-size: 15px;
+    }
+    
+    .about-see-more, .about-see-less {
+      color: blue;
+      margin-left: 7px;
+    }
+    
+    .dialog {
+      background-color: rgba(211, 211, 211, 0.5);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      display: none;
+    }
+    
+    .change-pic-cont {
+      position: relative;
+    }
+    
+    .current-pic {
+      width: 100%;
+      background-color: grey;
+    }
+    
+    .close-dialog {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-size: 30px;
+      width: auto;
+      padding: 4px 10px;
+    }
+    
+    .update-pic {
+      position: absolute;
+      top: -40px;
+      width: 100%;
+    }
+    
+   .browse {
+      background-color: rgb(153, 181, 204);
+      padding: 7px 10px;
+      border-radius: 20px;
+      color: black;
+      font-size: 14px;
+      margin: 0 15px;
+      margin-bottom: 3px;
+      transition: background-color 0.2s ease;
+    }
+    
+    .browse.clicked {
+      background-color: rgb(153, 181, 204, 0.5);
+    }
+    
+    .image-load {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: none;
+      background-color: rgba(211, 211, 211, 0.2);
+    }
+    
+        
+    .change-pass, .edit-edit, .save-edit, .cancel-edit {
+      background-color: rgba(51, 102, 153, 0.3);
+      padding: 10px 15px;
+      border-radius: 20px;
+      color: black;
+      font-size: 13px;
+      transition: background-color 0.2s ease;
+      text-decoration: none;
+      border: none;
+    }
+    
+    .cancel-edit {
+      background-color: white;
+      border: 1px solid rgba(51, 102, 153, 0.5);
+    }
+    
+    .save-edit {
+      padding: 10px 20px;
+      margin-right: 10px;
+    }
+    
+    .hidden-edit, .hidden-input {
+      display: none;
+    }
+    
+    .change-pass.clicked, .edit.clicked {
+      background-color: rgba(51, 102, 153, 0.5);
+    }
+    
+    label {
+      z-index: 0 !important;
+    }
+    
+
+    @media (min-width: 768px) { 
+      .close-dialog {
+        right: 50px;
+      }
+      
+      .body::-webkit-scrollbar {
+        width: 11px;
+      }
+    } 
+
+    @media (max-width: 576px) {
+      .content {
+        margin-top: 150px;
+      }
+    }
+    
+    
+    

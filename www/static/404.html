@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='viewport' content='width=device-width, initial-scale=1 maximum-scale=1'>
+ <!--
+ add every stylesheet and script
+ <link rel='stylesheet' href='asset/styles.css'>
+ <script src='asset/script.js'></script>
+ -->
+  <link rel="stylesheet" type="text/css" href="asset/bootstrap.css">
+  <script src="asset/jquery-3.7.0.min.js"></script>
+  <script src="asset/bootstrap.bundle.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <title>404</title>
+  
+  <style>
+  
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      user-select: none;
+    }
+    
+    .body {
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    
+    .body::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    /* Track */
+   .body::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey; 
+      border-radius: 3px;
+    }
+     
+    /* Handle */
+   .body::-webkit-scrollbar-thumb {
+      background: rgba(51, 102, 153, 0.4); 
+      border-radius: 3px;
+    }
+    
+    /* Handle on hover */
+   .body::-webkit-scrollbar-thumb:hover {
+      background: rgba(51, 102, 153, 0.7);
+    }
+    
+    .bird {
+      width: 30px;
+      transform: scale(1.5);
+    }
+    
+    .head {
+      color: #003366;
+    }
+    
+    #msg {
+      width: 90%;
+      margin: auto;
+      padding-top: 20px;
+      letter-spacing: 0.8px;
+      word-spacing: 2.5px;
+    }
+    
+    .code{
+      font-size: 80px;
+      color: grey;
+    }
+    
+    .page {
+      font-size: 20px;
+      color: #003366;
+    }
+    
+   @media (min-width: 768px) {
+      .body::-webkit-scrollbar {
+        width: 11px;
+      }
+   }
+    
+
+    
+        
+  </style>
+  
+  </head>
+  
+  <body>
+  
+  <div class="body">
+    
+   <div class='container-fluid text-center px-0 bird-box'>
+     <p class="lead head mb-2">B <img class='bird' src='asset/bird.png'> ird's Nest</p>
+     
+     <br><br><br><br>
+     
+      <h1 class="code">
+        <i class="bi bi-emoji-frown"></i>
+      </h1>
+      <p class="page">Page Not Found</h2> 
+      <p id="msg">The page you are looking for doesn't exist or an other error occurred.<br><br><a href="#" onclick="Back()">Go back</a> to choose a new direction.</p> 
+   </div>
+     
+   <br><br><br><br>
+   
+  </div>
+   
+  <script>
+
+    function Back() {
+        window.history.back();
+    }
+    
+  </script>
+   
+</body>
+</html>

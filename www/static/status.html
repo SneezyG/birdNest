@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='viewport' content='width=device-width, initial-scale=1 maximum-scale=1'>
+ <!--
+ add every stylesheet and script
+ <link rel='stylesheet' href='asset/styles.css'>
+ <script src='asset/script.js'></script>
+ -->
+  <link rel="stylesheet" type="text/css" href="asset/bootstrap.css">
+  <script src="asset/jquery-3.7.0.min.js"></script>
+  <script src="asset/bootstrap.bundle.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <title>Status</title>
+  
+  <link rel="stylesheet" type="text/css" href="asset/status.css">
+  
+  </head>
+  
+  <body>
+    
+  <div class="body">
+    
+   <div class="header">
+   <div class='container-fluid text-center px-0 bird-box'>
+     <p class="lead head mb-2">B <img class='bird' src='asset/bird.png'> ird's Nest</p>
+     <p class='bar'>Logged in as: <strong>Habeeb</strong></p>
+   </div>
+   
+   <div class='container-lg text-center px-4 pb-2' id="buttons">
+    <div class="utility row justify-content-center">
+     <a class="btn button col-auto m-1 mx-md-3 px-3" href='index.php?home'>Home</a>
+     <a class='btn button col-auto m-1 mx-md-3 px-3' href='status.php'>Status</a>
+     <a class='btn button col-auto m-1 mx-md-3' href='members.php'>Members</a>
+     <a class='btn button col-auto m-1 mx-md-3' href='friends.php'>Friends</a>
+     <a class='btn button col-auto m-1 mx-md-3 px-3' href='chat.php'>Chats</a>
+     <a class='btn button col-auto m-1 mx-md-3' href='profile.php'>Profile</a>
+     <a class='btn button out col-auto m-1 mx-md-3' href='logout.php'>Log out</a>
+    </div>
+   </div>
+   </div>
+   
+   <br><br>
+   
+   <div class="container content">
+   <div class="row row-cols-1 px-1">
+     
+   <div class="row status align-items-end justify-content-between"> 
+     <h6 class="col-auto status-title">Status</h6>
+     <h6 class="col-auto my-status">
+       <a href="my-status.php"> My Status </a>
+     </h6>
+   </div> <br>
+   
+   <div data-owner="habeeb" class="col col-md-8  col-lg-7 post text-center">
+     <div class="container-fluid">
+      <div class="row tag-cont">
+        <!-- every tag is tied to it's status with status-id -->
+        <div id="status-id" class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag coloured col"></div>
+      </div>
+      <div class="row gx-5 mutual-status mt-2">
+        <div class="col-auto">
+          <img class="status-pic" src="asset/userIcon.png">
+        </div>
+        <div class="col-auto pt-1 mutual-name">
+          <p class="m-0">Habeeb</p>
+          <small>
+            <span class="clock">&#x1F551;</span>
+            Today 7:40pm
+          </small>
+        </div>
+      </div>
+     </div>
+   </div>
+   
+   <div class="empty"></div>
+   
+   <div data-owner="sneezy" class="col col-md-8 col-lg-7 post text-center">
+     <div class="container-fluid">
+      <div class="row tag-cont">
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag coloured col"></div>
+      </div>
+      <div class="row gx-5 mutual-status mt-2">
+        <div class="col-auto">
+          <img class="status-pic" src="asset/userIcon.png">
+        </div>
+        <div class="col-auto pt-1 mutual-name">
+          <p class="m-0">Sneezy</p>
+          <small>
+            <span class="clock">&#x1F551;</span>
+            Today 7:40pm
+          </small>
+        </div>
+      </div>
+     </div>
+   </div>
+   
+   <div class="empty"></div>
+   
+   <div data-owner="basit" class="col col-md-8 col-lg-7 post text-center">
+     <div class="container-fluid">
+      <div class="row tag-cont">
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+      </div>
+      <div class="row gx-5 mutual-status mt-2">
+        <div class="col-auto">
+          <img class="status-pic" src="asset/userIcon.png">
+        </div>
+        <div class="col-auto pt-1 mutual-name">
+          <p class="m-0">Basit</p>
+          <small>
+            <span class="clock">&#x1F551;</span>
+            Today 7:40pm
+          </small>
+        </div>
+      </div>
+     </div>
+   </div>
+   
+   <div class="empty"></div>
+   
+   <div data-owner="ogunboy" class="col col-md-8 col-lg-7 post text-center">
+     <div class="container-fluid">
+      <div class="row tag-cont">
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag coloured col"></div>
+      </div>
+      <div class="row gx-5 mutual-status mt-2">
+        <div class="col-auto">
+          <img class="status-pic" src="asset/userIcon.png">
+        </div>
+        <div class="col-auto pt-1 mutual-name">
+          <p class="m-0">Ogunboy</p>
+          <small>
+            <span class="clock">&#x1F551;</span>
+            Today 7:40pm
+          </small>
+        </div>
+      </div>
+     </div>
+   </div>
+   
+   <div class="empty"></div>
+   
+   <div data-owner="adebayo" class="col col-md-8 col-lg-7 post text-center">
+     <div class="container-fluid">
+      <div class="row tag-cont">
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag coloured col"></div>
+      </div>
+      <div class="row gx-5 mutual-status mt-2">
+        <div class="col-auto">
+          <img class="status-pic" src="asset/userIcon.png">
+        </div>
+        <div class="col-auto pt-1 mutual-name">
+          <p class="m-0">Adebayo</p>
+          <small>
+            <span class="clock">&#x1F551;</span>
+            Today 7:40pm
+          </small>
+        </div>
+      </div>
+     </div>
+   </div>
+   
+   
+   <div data-owner="ridwan" class="col col-md-8 col-lg-7 post text-center">
+     <div class="container-fluid">
+      <div class="row tag-cont">
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag coloured col"></div>
+      </div>
+      <div class="row gx-5 mutual-status mt-2">
+        <div class="col-auto">
+          <img class="status-pic" src="asset/userIcon.png">
+        </div>
+        <div class="col-auto pt-1 mutual-name">
+          <p class="m-0">Ridwan</p>
+          <small>
+            <span class="clock">&#x1F551;</span>
+            Today 7:40pm
+          </small>
+        </div>
+      </div>
+     </div>
+   </div>
+   
+   <div class="empty"></div>
+   
+   <div data-owner="ahmed" class="col col-md-8 col-lg-7 post text-center">
+     <div class="container-fluid">
+      <div class="row tag-cont">
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag col"></div>
+        <div class="tag coloured col"></div>
+        <div class="tag coloured col"></div>
+      </div>
+      <div class="row gx-5 mutual-status mt-2">
+        <div class="col-auto">
+          <img class="status-pic" src="asset/userIcon.png">
+        </div>
+        <div class="col-auto pt-1 mutual-name">
+          <p class="m-0">Ahmed</p>
+          <small>
+            <span class="clock">&#x1F551;</span>
+            Today 7:40pm
+          </small>
+        </div>
+      </div>
+     </div>
+   </div>
+   
+  </div>
+  
+   <!-- the dialog for show status -->
+   <div class="dialog container-fluid p-0">
+     <p class="reply-feedback text-center">
+       <span>sending reply</span>
+     </p>
+     <div class="row shower-cont justify-content-center g-0">
+       <div class="col col-sm-9 col-md-7 col-lg-5 status-shower">
+           
+           <div class="row shower-tag-cont">
+             <div class="shower-tag col"></div>
+             <div class="shower-tag col"></div>
+             <div class="shower-tag col"></div>
+             <div class="shower-tag col"></div>
+             <div class="shower-tag col"></div>
+           </div>
+           
+           <div class="row the-media-cont align-items-center g-0">
+           <div class="col the-status m-0">
+             <img class="the-media">
+             <div class="status-loading-cont">
+              <div class="spinner-grow load status-loading" role="status">
+              </div>
+             </div>
+           </div> 
+           </div>
+           
+           <div class="status-about text-center text-light w-100">
+             <p class="px-4 about-text">
+               Men in paris, we chilling under the effiel tower 😎
+             </p>
+             <div class="reply">
+               <i class="bi bi-arrow-up-short reply-icon"></i>
+               <div>reply</div>
+             </div>
+           </div>
+           
+          <div class="container-fluid text-center py-2 footer">
+           <div class="container input-group">
+            <span class="form-control textarea" role="textbox" contenteditable></span>
+            <button class="btn sendBtn" type="button" id="send-btn"><i class="bi bi-send"></i>send</i>
+            </button>
+           </div>
+          </div>
+       </div>
+     </div>
+   </div>
+
+  </div>
+   
+   <div class="load text-center">
+    <div class="spinner-border" style="visibility:hidden; width:2rem; height:2rem; color:lightgrey; border-width:2px;" role="status"></div>
+   </div>
+
+ </div>
+   
+  <script src="asset/status.js"> </script>
+  <script src="asset/status-loader.js"></script>
+   
+</body>
+</html>

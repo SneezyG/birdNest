@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='viewport' content='width=device-width, initial-scale=1 maximum-scale=1'>
+  <link rel="stylesheet" type="text/css" href="asset/bootstrap.css">
+  <script src="asset/jquery-3.7.0.min.js"></script>
+  <script src="asset/bootstrap.bundle.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <title>Account</title>
+  <link rel="stylesheet" type="text/css" href="asset/account.css">
+  
+  </head>
+  
+  <body>
+    
+  <div class="body">
+    
+   <div class="header">
+   <div class='container-fluid text-center px-0 bird-box'>
+     <p class="lead head mb-2">B <img class='bird' src='asset/bird.png'> ird's Nest</p>
+     <p class='bar'>Logged in as: <strong>Habeeb</strong></p>
+   </div>
+   
+   <div class='container-lg text-center px-4 pb-2' id="buttons">
+    <div class="utility row justify-content-center">
+     <a class="btn button col-auto m-1 mx-md-3 px-3" href='index.php?home'>Home</a>
+     <a class='btn button col-auto m-1 mx-md-3 px-3' href='status.php'>Status</a>
+     <a class='btn button col-auto m-1 mx-md-3' href='members.php'>Members</a>
+     <a class='btn button col-auto m-1 mx-md-3' href='friends.php'>Friends</a>
+     <a class='btn button col-auto m-1 mx-md-3 px-3' href='chat.php'>Chats</a>
+     <a class='btn button col-auto m-1 mx-md-3' href='profile.php'>Profile</a>
+     <a class='btn button out col-auto m-1 mx-md-3' href='logout.php'>Log out</a>
+    </div>
+   </div>
+   </div>
+   
+   <br><br>
+   
+   <div class="container content">
+     
+   <div class="account text-center"> 
+     <h6 class="account-title">Sneezy</h6>
+     <div class="pic-cont">
+      <img class="account-pic" src="asset/userIcon.png">
+     </div>
+     <p class="online">
+       <span class="online-status"></span>
+       online
+    </p>
+   </div>
+   
+   <div class="nationality">
+     <h6 class="nat-title">Nationality</h6>
+     <p class="nat-value ps-2 mb-3">
+       Nigeria
+       <span class="country-flag">
+         &#x1F1F3;&#x1F1EC;
+       </span>
+     </p>
+   </div>
+     
+     <br>
+     
+   <div class="user-about">
+     <h6 class="about-title">About Sneezy</h6>
+     <p class="about-value ps-2 mb-3">
+     </p>
+   </div>
+   
+   <div class="container follow text-center">
+     <p class="mb-1 follow-text">
+       <span class="info-icon">&#9432;</span>
+       <span class="info-text">Sneezy is following you</span>
+    </p>
+    
+     <div class="row gx-3 justify-content-center">
+       <div class="col-auto">
+         <button id="unfollow" class="btn disable-btn">
+           <span class="btn-text">Unfollow</span>
+           <div class="row m-0 follow-loader align-items-center">
+           <div class="col">
+           <div class="spinner-border" style="width:1rem; height:1rem; visibility: hidden; color:lightgrey; border-width:2px;" role="status"></div>
+           </div>
+           </div>
+         </button>
+       </div>
+       
+       <div class="col-auto">
+         <button id="follow" class="able-btn btn">
+           <span class="btn-text">Follow Back</span>
+           <div class="row m-0 follow-loader align-items-center">
+           <div class="col">
+           <div class="spinner-border" style="width:1rem; height:1rem; visibility: hidden; color:lightgrey; border-width:2px;" role="status"></div>
+           </div>
+           </div>
+         </button>
+       </div>
+       
+     </div>
+   </div>
+   
+   <div class="row row-cols-1 px-1 mt-5">
+     <h6 class="ps-3 acc-friend">Sneezy Friends</h6>
+     
+     <div class="col col-md-9 col-lg-8 user-friend">
+      <div class="row gx-4 m-0">
+        <div class="col-auto pic">
+          <img class="mutual-pic" src="asset/userIcon.png">
+        </div>
+        <div class="col pt-1 mutual-name">
+          <p class="m-0 username"> Habeeb </p>
+          <small class="mutual-msg text-nowrap">
+            You are following habeeb
+          </small>
+        </div>
+        <div class="col-auto pt-3">
+         <button data-friend="habeeb" class="btn unfollow-friend">
+           
+           <span class="btn-text">unfollow</span>
+           
+           <div class="row m-0 follow-loader align-items-center">
+           <div class="col">
+           <div class="spinner-border" style="width:1rem; height:1rem; visibility: hidden; color:lightgrey; border-width:2px;" role="status"></div>
+           </div>
+           </div>
+           
+         </button>
+        </div>
+      </div>
+     </div>
+     
+     <div class="col col-md-9 col-lg-8 user-friend">
+      <div class="row gx-4 m-0 ">
+        <div class="col-auto pic">
+          <img class="mutual-pic" src="asset/userIcon.png">
+        </div>
+        <div class="col pt-1 mutual-name">
+          <p class="m-0 username"> Taiwo </p>
+          <small class="mutual-msg text-nowrap">
+            Taiwo is not your friend
+          </small>
+        </div>
+        <div class="col-auto pt-3">
+         <button data-friend="taiwo" class="btn follow-friend">
+           <span class="btn-text">follow</span>
+           
+           <div class="row m-0 follow-loader align-items-center">
+           <div class="col">
+           <div class="spinner-border" style="width:1rem; height:1rem; visibility: hidden; color:lightgrey; border-width:2px;" role="status"></div>
+           </div>
+           </div>
+         </button>
+        </div>
+      </div>
+     </div>
+     
+     <div class="col col-md-9 col-lg-8 user-friend">
+      <div class="row gx-4 m-0">
+        <div class="col-auto pic">
+          <img class="mutual-pic" src="asset/userIcon.png">
+        </div>
+        <div class="col pt-1 mutual-name">
+          <p class="m-0 username"> Ogunboy </p>
+          <small class="mutual-msg text-nowrap">
+            Ogunboy is not your friend
+          </small>
+        </div>
+        <div class="col-auto pt-3">
+         <button data-friend="ogunboy" class="btn  follow-friend">
+           
+           <span class="btn-text">follow</span>
+           
+           <div class="row m-0 follow-loader align-items-center">
+           <div class="col">
+           <div class="spinner-border" style="width:1rem; height:1rem; visibility: hidden; color:lightgrey; border-width:2px;" role="status"></div>
+           </div>
+           </div>
+           
+         </button>
+        </div>
+      </div>
+     </div>
+     
+     <div class="col col-md-9 col-lg-8 user-friend">
+      <div class="row gx-4 m-0">
+        <div class="col-auto pic">
+          <img class="mutual-pic" src="asset/userIcon.png">
+        </div>
+        <div class="col pt-1 mutual-name">
+          <p class="m-0 username"> Adebayo </p>
+          <small class="mutual-msg text-nowrap">
+            Adebayo is not your friend
+          </small>
+        </div>
+        <div class="col-auto pt-3">
+         <button data-friend="adebayo" class="btn follow-friend">
+           <span class="btn-text">follow</span>
+           
+           <div class="row m-0 follow-loader align-items-center">
+           <div class="col">
+           <div class="spinner-border" style="width:1rem; height:1rem; visibility: hidden; color:lightgrey; border-width:2px;" role="status"></div>
+           </div>
+           </div>
+         </button>
+        </div>
+      </div>
+     </div>
+     
+     <div class="col col-md-9 col-lg-8 user-friend">
+      <div class="row gx-4 m-0">
+        <div class="col-auto pic">
+          <img class="mutual-pic" src="asset/userIcon.png">
+        </div>
+        <div class="col pt-1 mutual-name">
+          <p class="m-0 username"> Basit </p>
+          <small class="mutual-msg text-nowrap">
+            Basit is not your friend 
+          </small>
+        </div>
+        <div class="col-auto pt-3">
+         <button data-friend="basit" class="btn follow-friend">
+           
+           <span class="btn-text">follow</span>
+           
+           <div class="row m-0 follow-loader align-items-center">
+           <div class="col">
+           <div class="spinner-border" style="width:1rem; height:1rem; visibility: hidden; color:lightgrey; border-width:2px;" role="status"></div>
+           </div>
+           </div>
+           
+         </button>
+        </div>
+      </div>
+     </div>
+   
+   </div>
+   
+   <div class="row justify-content-center">
+   <h6 class="col-auto more-friend">
+       <a href="friend.php?user='sneezy'"> More Friend </a>
+   </h6>
+   </div>
+   
+   </div>
+   
+   <!-- dialog for viewing profile photo -->
+   <div class="dialog row m-0 justify-content-center align-items-center">
+     <i class="bi bi-x-lg close-dialog"></i>
+     <div class="col- col-sm-9 col-md-7 col-lg-5 change-pic-cont">  
+       <img class="current-pic">
+     </div>
+   </div>
+
+ </div>
+   
+  <script src="asset/account.js"></script>
+   
+</body>
+</html>
+    
