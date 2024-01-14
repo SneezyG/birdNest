@@ -16,18 +16,24 @@ html, body {
     }
   
     .bird {
-      width: 30px;
+      width: 24px;
       transform: scale(1.5);
     }
     
     .dp {
-      width: 45px;
+      width: 40px;
       background-color: lightgrey;
-      border-radius: 18px;
+      border-radius: 50%;
     }
 
     .bar {
       background-color: rgba(51, 102, 153);
+    }
+    
+    .back-btn {
+      color: lightgrey !important;
+      border: none !important;
+      font-size: 15px !important;
     }
     
     .offsetT {
@@ -75,9 +81,9 @@ html, body {
     
     .light {
       display: inline-block;
-      width: 11px;
-      height: 11px;
-      border-radius: 7px;
+      width: 9px;
+      height: 9px;
+      border-radius: 6px;
       background-color: #CD5C5C;
       border: ;
     }
@@ -86,7 +92,7 @@ html, body {
       text-transform: capitalize;
       color: white;
       font-weight: bold;
-      font-size: 15px;
+      font-size: 13px;
     }
     
     b {
@@ -110,6 +116,7 @@ html, body {
     
     .head {
       color: #003366;
+      font-size: 17px;
     }
     
     .msg {
@@ -141,7 +148,7 @@ html, body {
       font-family: "Roboto Condensed", sans-serif;
       font-weight: 500;
       letter-spacing: -0.5px;
-      font-size: 15px;
+      font-size: 14px;
       color: #474646;
     }
   
@@ -209,7 +216,7 @@ html, body {
     }
     
     .msgHeader {
-      background-color: #66CCCC;
+      background-color: lightgrey;
       display: inline-block;
       padding: 3px 13px;
       border-radius: 12px;
